@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <h1 class="page-header mb-2 fg-default">Tags</h1>
+  <p class="tags-title fg-dark-default">
+    A tag is a keyword or label that categorizes your question with other, similar questions.
+    Using the right tags makes it easier for others to find and answer your question.
+  </p>
+  <div class="d-flex my-4">
+    <input #input (input)="filterTags(input.value)" placeholder="Search" class="search-box me-5">
+  </div>
+  <div class="row">
+    <div class="col-6 col-sm-4 col-lg-3 p-2" *ngFor="let tag of tags">
+      <div class="d-flex flex-column p-3 bg-dark-blue card-border rounded-2">
+        <p class="tag-card-info fg-blue">{{tag?.name}}</p>
+        <p class="tag-card-info fg-dark-default"><span class="fg-light-default">{{tag?.totalMentions}}</span> questions</p>
+        <p class="tag-card-info fg-dark-default"><span class="fg-light-default">{{tag?.mentionsToday}}</span> questions today</p>
+      </div>
+    </div>
+  </div>
+  <button class="show-more-button" (click)="showMoreTags()">Show more</button>
+</div>

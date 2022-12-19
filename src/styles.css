@@ -1,1 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
+body, html
+{
+  background: #000814 !important;;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: 'Inconsolata', monospace !important;
+  overflow-y: hidden;
+}
+
+app-root
+{
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+app-questions
+{
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+:root
+{
+  --fg-light-default:#9DD0FF;
+  --fg-blue:#3593EA;
+  --fg-default:#D6EBFF;
+  --fg-dark-default:#CAD6E1;
+  --fg-gray-default:#8596A6;
+  --fg-light-orange:#FFD08A;
+  --fg-dark-orange:#D0B791;
+  --bg-btn-blue: rgba(53, 147, 234, 0.1);
+  --bg-btn-border: #1d3249;
+  --bg-dark-blue: #1c2733;
+}
+
+p
+{
+  margin: 0 !important;
+}
+
+.fg-light-orange
+{
+  color: var(--fg-light-orange);
+}
+.fg-blue
+{
+  color: var(--fg-blue);
+}
+
+.fg-light-blue
+{
+  color: #03A9F4 !important;
+}
+
+.fg-default
+{
+  color: var(--fg-default);
+}
+
+.fg-light-default
+{
+  color: var(--fg-light-default);
+}
+
+.fg-dark-default
+{
+  color: var(--fg-dark-default);
+}
+
+.fg-gray-default
+{
+  color: var(--fg-gray-default);
+}
+
+.card-border
+{
+  border: 1px solid #253543;
+}
+.card-border-rad
+{
+  border-radius: 6px 6px 0 0;
+}
+.card-stats
+{
+  font-size: 15px;
+  color: var(--fg-dark-default);
+}
+
+.user-avatar
+{
+  height: 33px;
+  width: 34px;
+  border: none;
+  border-radius: 50%;
+}
+
+.username
+{
+  color: white;
+  font-size: 15px;
+}
+
+.page-header
+{
+  font-size: 32px;
+}
+
+.show-more-button {
+  margin:20px auto 0;
+  display: flex;
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 4px 30px;
+  background: rgba(255, 208, 138, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #806b46;
+  color: #c9a569;
+  transition: 400ms;
+}
+
+.show-more-button:hover {
+  box-shadow: 0 0 0 2px #b29860;
+  color: #ffd08a;
+}

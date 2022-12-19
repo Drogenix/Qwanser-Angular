@@ -1,0 +1,81 @@
+<div class="container-fluid mb-5">
+  <h1 class="user-question-header fg-default">Stack overflow on push items to the list</h1>
+  <div class="d-flex align-items-center my-2">
+    <p class="optional-info me-4">Modified: <span class="fg-blue">Today</span></p>
+    <p class="optional-info">Viewed: <span class="fg-blue">2 times</span></p>
+  </div>
+  <div class="card-border card-border-rad">
+    <div class="comment-header card-border-rad">
+      <img alt="none" src="https://i.imgur.com/D6lmc35.jpg" class="user-avatar">
+      <p class="username mx-3">Drogenix</p>
+      <p class="optional-info">asked this question on <span class="comment-date">Nov 15, 2022 at 9.19 pm</span></p>
+    </div>
+    <div class="comment-info">
+      <p>
+        I'm working on java spring application where I use RedissonRegionFactory as hibernate second level cache provide, I'm using this maven dependency:
+        <br>I’m really bored. How to solve that?
+      </p>
+    </div>
+  </div>
+  <h1 class="user-question-header fg-default mt-5 mb-3">Answers: 2</h1>
+  <div class="d-flex flex-column">
+    <div class="d-flex">
+      <img alt="none" src="https://i.imgur.com/D6lmc35.jpg" class="user-avatar mt-2 me-3">
+      <div class="card-border card-border-rad">
+        <div class="comment-header card-border-rad">
+          <p class="username me-3">ktl228</p>
+          <p class="optional-info">answered on <span class="comment-date">Nov 15, 2022 at 9.25 pm</span></p>
+        </div>
+        <div class="comment-info">
+          <p> The code that you listed above is basically your implementation details of a - Transport Client element pointing to an instance of Elasticsearch Server i.e. this defines your persistent layer by using Spring Data.
+            <br>
+            This code will be used by your elasticsearch repositories i.e. repositories that you define by extending - ElasticsearchRepository from Spring Data.
+            <br>
+            You need to edit @EnableElasticsearchRepositories in code listed by you to actually point to package where you are keeping your repository definitions - no other call would be needed.
+            When you are going to write/index data to elasticsearch, you work with ElasticsearchRepository interface and you need to define your own repositories and these repositories work with instances as per listing in your code.
+            <br>
+            Hope it helps !!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="user-comment-link"></div>
+  </div>
+  <div class="d-flex flex-column">
+    <div class="d-flex">
+      <img alt="none" src="https://i.imgur.com/D6lmc35.jpg" class="user-avatar mt-2 me-3">
+      <div class="card-border card-border-rad">
+        <div class="comment-header card-border-rad">
+          <p class="username me-3">ktl228</p>
+          <p class="optional-info">answered on <span class="comment-date">Nov 15, 2022 at 9.25 pm</span></p>
+        </div>
+        <div class="comment-info">
+          <p> The code that you listed above is basically your implementation details of a - Transport Client element pointing to an instance of Elasticsearch Server i.e. this defines your persistent layer by using Spring Data.
+            <br>
+            This code will be used by your elasticsearch repositories i.e. repositories that you define by extending - ElasticsearchRepository from Spring Data.
+            <br>
+            You need to edit @EnableElasticsearchRepositories in code listed by you to actually point to package where you are keeping your repository definitions - no other call would be needed.
+            When you are going to write/index data to elasticsearch, you work with ElasticsearchRepository interface and you need to define your own repositories and these repositories work with instances as per listing in your code.
+            <br>
+            Hope it helps !!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="user-comment-link"></div>
+  </div>
+  <div class="d-flex flex-column w-100">
+    <div class="d-flex">
+      <img alt="none" src="https://i.imgur.com/D6lmc35.jpg" class="user-avatar mt-3 me-3">
+      <div class="card-border card-border-rad w-100">
+        <div class="comment-header card-border-rad">
+          <p class="fg-blue">
+            Write your answer
+          </p>
+        </div>
+        <textarea placeholder="Leave your comment" class="write-answer-content"></textarea>
+      </div>
+    </div>
+    <button class="post-comment-button ms-auto mt-3">Comment</button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.search-box
+{
+  max-width: 210px;
+  border-radius: 6px;
+  border: none;
+  background: #0A151F;
+  box-shadow: 0 0 0 1px var(--bg-dark-blue);
+  height: 28px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  color: var(--fg-dark-default);
+  font-size: 14px;
+  content: 'Search';
+  transition: 400ms;
+}
+
+.search-box::placeholder
+{
+  color: var(--fg-gray-default);
+}
+
+.search-box:focus-visible
+{
+  outline: none;
+  box-shadow: 0 0 0 2px var(--fg-blue);
+}

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <h1 class="page-header fg-default">Users</h1>
+  <div class="d-flex my-4">
+    <app-search-box (inputValueEvent)="filterUsers($event)"></app-search-box>
+  </div>
+  <div *ngIf="!isErrorOccured; else errorMessage" class="d-block">
+    <div class="row px-4 mx-auto pt-3">
+      <div class="col-sm-6 col-md-4 col-lg-3 px-2 mb-5" *ngFor="let user of users">
+        <div class="d-flex align-items-center">
+          <img alt="none" src="{{user.imageUrl}}" class="user-avatar avatar-big me-3">
+          <div class="d-block">
+            <p class="username mb-1">{{user.username}}</p>
+            <p class="member-since-small">member since {{user.registrationDate | date:'dd.MM.yyyy'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="show-more-button" (click)="showMoreUsers()">Show more</button>
+  </div>
+  <ng-template #errorMessage>
+    <p class="error-message">Users not found</p>
+  </ng-template>
+</div>

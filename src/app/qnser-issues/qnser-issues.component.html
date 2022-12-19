@@ -1,0 +1,73 @@
+<div class="container-fluid pt-5">
+  <div class="row">
+    <div class="col-8">
+      <h1 class="questions-header mb-5">All questions</h1>
+      <div class="d-flex justify-content-between pb-3">
+        <p class="questions-amount">1,255 questions</p>
+        <div class="d-flex align-items-center">
+            <app-search-box (inputValueEvent)="onInputChanged($event)"></app-search-box>
+          <a class="ask-question-link">Ask question</a>
+        </div>
+      </div>
+      <div class="row row-scrollable questions-list px-5">
+        <ng-container *ngIf="isQuestionsFounded; else noResults">
+          <div class="questions-card card-border card-border-rad d-flex flex-column mb-4" *ngFor="let question of questions">
+            <h2 class="card-header mb-3">{{question.title}}</h2>
+            <div class="d-flex mb-3">
+              <div class="tag-link-border me-2" *ngFor="let questionTag of question.tags">
+                <a class="tag-link fg-blue">{{questionTag.tag.name}}</a>
+              </div>
+            </div>
+            <p class="card-question mb-3">{{question.description}}</p>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <img alt="none" src="https://i.imgur.com/D6lmc35.jpg" class="user-avatar">
+                <p class="username ms-3">{{question.user.username}}</p>
+                <p class="asked-at ms-3">asked at {{question.date | date:'shortTime'}}</p>
+              </div>
+              <div class="d-flex align-items-center me-3">
+                <p class="card-stats me-3"><span class="fg-blue">{{question.answersCount}}</span> answers</p>
+                <p class="card-stats"><span class="fg-blue">{{question.viewsCount}}</span> views</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #noResults>
+          <p class="not-founded-message">No results founded...</p>
+        </ng-template>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="top-users-container card-border card-border-rad me-auto">
+        <div class="top-header-border card-border-rad">
+          <h2 class="top-header">
+            The most active users
+          </h2>
+        </div>
+        <div class="top-field flex-wrap d-flex justify-content-between" *ngFor="let user of mostActiveUsers; let i = index">
+          <div class="d-flex align-items-center">
+            <p class="user-position me-3">#{{i+1}}</p>
+            <img alt="none" src="https://i.imgur.com/D6lmc35.jpg" class="user-avatar me-3">
+            <p class="username">{{user.username}}</p>
+          </div>
+          <div class="d-flex flex-column">
+            <p class="card-stats"><span class="fg-blue">{{user.answersCount}}</span> answers</p>
+            <p class="card-stats"><span class="fg-blue">{{user.questionsCount}}</span> questions</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="popular-tags me-auto mt-5">
+        <h2 class="top-header mb-3">Popular tags</h2>
+        <div class="d-flex flex-column">
+          <div class="d-flex mb-3" *ngFor="let tag of popularTags">
+            <div class="tag-link-border me-3">
+              <a class="tag-link fg-blue">{{tag.name}}</a>
+            </div>
+            <p class="tags-mentions fw-normal">- {{tag.totalMentions}} mentions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+.container-fluid
+{
+  max-width: 1100px;
+}
+
+.user-profile-image
+{
+  border: none;
+  border-radius: 50%;
+  height: 150px;
+  width: 156px;
+}
+
+.user-stats-container
+{
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.socials-link
+{
+  font-size: 15px;
+  color: #8596A6;
+}
+
+.user-profile-socials
+{
+  border-top: 1px solid #253543;
+  padding-top: 5px;
+}
+
+.user-member-since
+{
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.user-last-activity
+{
+  font-size: 17px;
+  color: #9DD0FF;
+}
+.user-profile-name
+{
+  font-size: 24px;
+  font-weight: bolder;
+  color: white;
+}
+.user-profile-header
+{
+  font-size: 24px;
+}
+.user-info-container
+{
+  border-bottom: none;
+}
+
+.border-light-blue
+{
+  border-color: #03A9F4;
+}
+
+.user-profile-info
+{
+  font-size: 16px;
+  color: var(--fg-default);
+}
+
+.info-date
+{
+  font-size: 14px;
+  color: var(--fg-dark-default);
+}
+
+.info-field
+{
+  border-bottom: 1px solid #253543;
+}
+
+.view-all-link
+{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}

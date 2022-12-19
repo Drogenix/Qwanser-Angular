@@ -1,0 +1,62 @@
+.app-brend
+{
+  cursor: pointer;
+  margin: auto;
+}
+.container-fluid
+{
+  max-width: 1100px;
+}
+.app-navbar
+{
+  background: #000814;
+  height: 70px;
+}
+.app-nav-link
+{
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  transition: .4s;
+}
+.app-nav-link:hover
+{
+  color: #869cb0;
+}
+.nav-button
+{
+  background: transparent;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 4px 20px;
+  transition: .4s;
+}
+.signin_button:hover
+{
+  color: #58a6ff;
+}
+.signup-button
+{
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5)
+}
+.signup-button:hover
+{
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  color: rgba(255, 255, 255);
+  text-shadow: 0 0 1px;
+}
+
+.vertical-separator
+{
+  border-right: 1px solid #455463;
+  margin: 0 30px;
+}

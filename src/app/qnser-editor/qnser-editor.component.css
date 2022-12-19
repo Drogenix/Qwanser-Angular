@@ -1,0 +1,44 @@
+.NgxEditor__Wrapper
+{
+  max-width: 767px;
+  border: 1px solid rgba(89, 133, 174, 0.6) !important;
+}
+.NgxEditor__MenuItem--Icon
+{
+  cursor: pointer;
+  position: relative;
+}
+.NgxEditor__MenuItem--Icon:hover
+{
+  background: transparent !important;
+  fill: #6082a4 !important;
+}
+.NgxEditor__MenuItem--Icon:hover svg
+{
+  fill: #64b6ff !important;
+}
+
+.NgxEditor__Wrapper svg
+{
+  fill: #d6ebff !important;
+}
+.NgxEditor__MenuBar
+{
+  background: #05172c !important;
+  border-bottom-color: rgba(89, 133, 174, 0.3) !important;;
+}
+.NgxEditor
+{
+  background: #000e1e !important;
+  color: #ffffff !important;
+  letter-spacing: 2px;
+  font-family: 'Inconsolata', monospace !important;
+}
+.NgxEditor__Placeholder:before
+{
+  color: #7ca7d9 !important;
+}
+.NgxEditor__MenuItem--Active
+{
+  background: #5985AE49 !important;
+}
